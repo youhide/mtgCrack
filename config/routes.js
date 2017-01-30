@@ -33,19 +33,19 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    controller: 'HomeController',
+    controller: 'AppController',
     action: 'index'
   },
   '/search': {
-    controller: 'HomeController',
+    controller: 'AppController',
     action: 'search'
   },
   '/search/:cardname': {
-    controller: 'HomeController',
+    controller: 'AppController',
     action: 'search'
   },
   'get /public/vars': {
-    controller: 'HomeController',
+    controller: 'PublicController',
     action: 'publicVars'
   }
 

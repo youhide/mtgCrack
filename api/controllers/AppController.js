@@ -1,5 +1,5 @@
 /**
- * HomeController
+ * AppController
  *
  * @description :: Server-side logic for managing homes
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
@@ -17,14 +17,8 @@ module.exports = {
 		if(searchInput === '') return res.view('homepage', {searchInput: searchInput});
     mtg.card.where({ name: searchInput })
 		.then(cards => {
-		    console.log(cards);
+		    sails.log(cards);
 				return res.view('homepage', { cards: cards, searchInput: searchInput});
     });
-	},
-	publicVars: function(req, res) {
-		var json = {
-			publicVars: sails.config.publicVars
-		};
-		res.json(200, json);
 	}
 };
