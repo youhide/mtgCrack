@@ -1,0 +1,10 @@
+.card-img {
+  width: 223px;
+  height: 310px;
+}
+.cardInfo-block {
+  min-height: 250px;
+}
+.card-title {
+    text-align: center;
+}
