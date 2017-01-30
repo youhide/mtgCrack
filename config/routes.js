@@ -38,7 +38,7 @@ module.exports.routes = {
   },
   '/search': {
     controller: 'HomeController',
-    action: 'index'
+    action: 'search'
   },
   '/search/:cardname': {
     controller: 'HomeController',

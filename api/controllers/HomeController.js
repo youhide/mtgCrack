@@ -12,11 +12,11 @@ module.exports = {
 		res.view('homepage');
 	},
 	search: function(req, res){
-		sails.log(req.params.cardname);
-    mtg.card.where({ name: req.params.cardname })
+		var searchInput = req.params.cardname ? req.params.cardname : '';
+		if(searchInput === '') return res.view('homepage', {searchInput: searchInput});
+    mtg.card.where({ name: searchInput })
 		.then(cards => {
-		    console.log(cards);
-				return res.view('homepage', { cards: cards});
+				return res.view('homepage', { cards: cards, searchInput: searchInput});
     });
 	}
 };
