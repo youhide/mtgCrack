@@ -16,6 +16,7 @@ module.exports = {
 		if(searchInput === '') return res.view('homepage', {searchInput: searchInput});
     mtg.card.where({ name: searchInput })
 		.then(cards => {
+		    console.log(cards);
 				return res.view('homepage', { cards: cards, searchInput: searchInput});
     });
 	}
