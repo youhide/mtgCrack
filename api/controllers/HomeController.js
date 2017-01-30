@@ -9,7 +9,8 @@ const mtg = require('mtgsdk');
 
 module.exports = {
 	index: function(req, res){
-		res.view('homepage');
+		var searchInput = '';
+		res.view('homepage', {searchInput: searchInput});
 	},
 	search: function(req, res){
 		var searchInput = req.params.cardname ? req.params.cardname : '';
