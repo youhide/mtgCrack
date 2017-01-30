@@ -10,6 +10,14 @@
 <% if (typeof cards == 'object' && cards) { %>
   <% cards.forEach( function( card ){ %>
     <h1><%=card['name']%></h1>
-    <img src="<%=card['imageUrl']%>">
+    <% if (card['imageUrl']) { %>
+      <img src="<%=card['imageUrl']%>">
+    <% } else { %>
+      <h5>No img</h5>
+    <% } %>
+    <p>Rarity: <%=card['rarity']%></p>
+    <p>Set: <%=card['setName']%></p>
+    <p>Type: <%=card['type']%></p>
+    <p>Text: <%=card['text']%></p>
   <% }); %>
 <% } %>
