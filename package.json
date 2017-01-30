@@ -20,14 +20,18 @@
     "grunt-sync": "0.5.2",
     "include-all": "^1.0.0",
     "mtgsdk": "^0.1.1",
+    "pm2": "^2.3.0",
     "rc": "1.0.1",
     "sails": "~0.12.11",
     "sails-disk": "~0.10.9"
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js",
-    "test": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test/integration/**/*.test.js"
+    "start": "node ./node_modules/pm2/bin/pm2 start app.js --name mtgCrack -i 4",
+    "test": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test/integration/**/*.test.js",
+    "poststart": "node ./node_modules/pm2/bin/pm2 logs",
+    "stop": "node ./node_modules/pm2/bin/pm2 stop mtgCrack",
+    "poststop": "node ./node_modules/pm2/bin/pm2 delete mtgCrack"
   },
   "main": "app.js",
   "repository": {
