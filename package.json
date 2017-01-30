@@ -27,7 +27,7 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node ./node_modules/pm2/bin/pm2 start app.js --name mtgCrack -i 4",
+    "start": "node ./node_modules/pm2/bin/pm2 start app.js --name mtgCrack",
     "test": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test/integration/**/*.test.js",
     "poststart": "node ./node_modules/pm2/bin/pm2 logs",
     "stop": "node ./node_modules/pm2/bin/pm2 stop mtgCrack",
