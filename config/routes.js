@@ -36,6 +36,10 @@ module.exports.routes = {
     controller: 'HomeController',
     action: 'index'
   },
+  '/search': {
+    controller: 'HomeController',
+    action: 'index'
+  },
   '/search/:cardname': {
     controller: 'HomeController',
     action: 'search'

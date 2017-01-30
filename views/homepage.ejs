@@ -1,14 +1,15 @@
-<form class="search-form">
+<form class="search-form" id="searchForm">
     <div class="input-group">
         <div class="input-group-addon"><span><i class="glyphicon glyphicon-search"></i></span></div>
-        <input type="text" placeholder="Black Lotus" class="form-control" />
+        <input type="text" id="searchInput" placeholder="Black Lotus" class="form-control" />
         <div class="input-group-btn">
-            <button class="btn btn-default" type="button">Search</button>
+            <button id="searchButton" class="btn btn-default" type="button">Search</button>
         </div>
     </div>
 </form>
 <% if (typeof cards == 'object' && cards) { %>
   <% cards.forEach( function( card ){ %>
     <h1><%=card['name']%></h1>
+    <img src="<%=card['imageUrl']%>">
   <% }); %>
 <% } %>

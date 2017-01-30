@@ -15,7 +15,7 @@ module.exports = {
 		sails.log(req.params.cardname);
     mtg.card.where({ name: req.params.cardname })
 		.then(cards => {
-		    //console.log(cards);
+		    console.log(cards);
 				return res.view('homepage', { cards: cards});
     });
 	}
