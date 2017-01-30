@@ -10,6 +10,8 @@
  *
  */
 
+var version = require('../version').version;
+
 module.exports = {
 
   /***************************************************************************
@@ -20,5 +22,10 @@ module.exports = {
   // models: {
   //   connection: 'someMongodbServer'
   // }
+
+  publicVars: {
+    url: 'http://localhost:1337/', // ou http://webwdigets.us-east-1.elasticbeanstalk.com/
+    version: version //package.json version
+  },
 
 };

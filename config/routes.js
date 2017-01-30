@@ -43,6 +43,10 @@ module.exports.routes = {
   '/search/:cardname': {
     controller: 'HomeController',
     action: 'search'
+  },
+  'get /public/vars': {
+    controller: 'HomeController',
+    action: 'publicVars'
   }
 
   /***************************************************************************

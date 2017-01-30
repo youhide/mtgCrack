@@ -20,5 +20,11 @@ module.exports = {
 		    console.log(cards);
 				return res.view('homepage', { cards: cards, searchInput: searchInput});
     });
+	},
+	publicVars: function(req, res) {
+		var json = {
+			publicVars: sails.config.publicVars
+		};
+		res.json(200, json);
 	}
 };

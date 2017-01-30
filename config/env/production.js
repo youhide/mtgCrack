@@ -35,4 +35,9 @@ module.exports = {
   //   level: "silent"
   // }
 
+  publicVars: {
+    url: 'https://mtgcrack.herokuapp.com/', // ou http://webwdigets.us-east-1.elasticbeanstalk.com/
+    version: version //package.json version
+  },
+
 };
