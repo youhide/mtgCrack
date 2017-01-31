@@ -2,7 +2,7 @@
   "name": "mtgCrack",
   "private": true,
   "version": "0.0.1",
-  "description": "a Sails application",
+  "description": "Cracking Magic The Gathering",
   "keywords": [],
   "dependencies": {
     "ejs": "2.3.4",
@@ -36,9 +36,9 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/anonymous node/sails user/mtgCrack.git"
+    "url": "https://github.com/youhide/mtgCrack.git"
   },
-  "author": "anonymous node/sails user",
+  "author": "Youri T. K. K. Mattar",
   "license": "",
   "devDependencies": {
     "mocha": "^3.2.0",

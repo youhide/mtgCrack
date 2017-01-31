@@ -12,7 +12,17 @@ describe('AppController', function() {
     });
   });
 
-  describe('search', function(){
+  describe('search home', function(){
+    it('should respond to GET',function(){
+      superagent
+        .get(sails.config.publicVars.url+'search')
+        .end(function(res){
+          expect(res.status).to.equal(200);
+      });
+    });
+  });
+
+  describe('search term (lotus)', function(){
     it('should respond to GET',function(){
       superagent
         .get(sails.config.publicVars.url+'search/lotus')
