@@ -1,1 +1,1 @@
-# mtgCrack [![Build Status](https://travis-ci.com/youhide/mtgCrack.svg?token=fa2y9YZMy7fdpsVWYpvw&branch=master)](https://travis-ci.com/youhide/mtgCrack)
+# mtgCrack [![Build Status](https://travis-ci.org/youhide/mtgCrack.svg?branch=master)](https://travis-ci.org/youhide/mtgCrack)
