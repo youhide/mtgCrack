@@ -3,11 +3,4 @@ node_js:
   - "6"
 env:
   - NODE_ENV=development
-  - CXX=g++-4.8
 script: npm test
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
