@@ -2,5 +2,5 @@ language: node_js
 node_js:
   - "6"
 env:
-  - NODE_ENV=production
+  - NODE_ENV=development
 script: npm test
