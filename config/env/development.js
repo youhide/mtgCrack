@@ -24,7 +24,7 @@ module.exports = {
   // }
 
   publicVars: {
-    url: 'http://localhost:1337/', // ou http://webwdigets.us-east-1.elasticbeanstalk.com/
+    url: 'http://localhost:1337/',
     version: version //package.json version
   },
 

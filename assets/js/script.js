@@ -1,3 +1,5 @@
+addToHomescreen();
+
 $.ajax({
   url: '/public/vars',
   type: 'GET',
