@@ -18,13 +18,14 @@ io.socket.get('/socket/join', function gotResponse(body, response) {
 
 $(document).ready(function(){
   $('#searchForm').submit(function(event){
-    var postVal = {searchValue: $('#searchInput').val()};
+    var inputVal = $('#searchInput').val();
+    var postVal = {searchValue: inputVal};
     io.socket.post('/socket/getname', postVal, function (resData, jwRes) {
       console.log('jwRes = '+jwRes.statusCode);
       console.log('resData = '+resData.cards);
       document.title = resData.title;
+      window.history.pushState('', '', '/search/'+inputVal);
       $('#cardsList').empty();
-      //document.getElementById('cardsList').innerHTML = JSON.stringify(resData.cards);
       if (typeof resData.cards == 'object' && resData.cards) {
         resData.cards.forEach( function( card ){
           $('#cardsList').append('<div class="col-md-3 col-sm-6 cardcol-'+card.id+'">');
