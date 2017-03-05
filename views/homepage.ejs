@@ -10,30 +10,6 @@
         </div>
     </form>
   </div>
-  <div class="row">
-    <% if (typeof cards == 'object' && cards) { %>
-      <% cards.forEach( function( card ){ %>
-        <div class="col-md-3 col-sm-6">
-          <div class="box">
-            <% if (card['imageUrl']) { %>
-              <img class="card-img img-responsive center-block" src="<%=card['imageUrl']%>" alt="Card image cap">
-            <% } else { %>
-              <img class="card-img img-responsive center-block" src="http://www.freeiconspng.com/uploads/no-image-icon-23.jpg" alt="Card image cap">
-            <% } %>
-            <div class="cardInfo-block">
-              <h4 class="card-title"><%=card['name']%></h4>
-              <p class="card-text">Rarity: <%=card['rarity']%></p>
-              <p class="card-text">Set: <%=card['setName']%></p>
-              <p class="card-text">Type: <%=card['type']%></p>
-              <% if (card['text']) { %>
-                <p class="card-text"><small class="text-muted">Text: <%=card['text']%></small></p>
-              <% } else { %>
-                <p class="card-text"><small class="text-muted">Text: None</small></p>
-              <% } %>
-            </div>
-          </div>
-        </div>
-      <% }); %>
-    <% } %>
+  <div class="row" id="cardsList">
   </div>
 </div>
