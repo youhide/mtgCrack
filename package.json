@@ -40,8 +40,5 @@
   },
   "author": "Youri T. K. K. Mattar",
   "license": "",
-  "devDependencies": {
-    "mocha": "^3.2.0",
-    "superagent": "^3.4.1"
-  }
+  "devDependencies": {}
 }
