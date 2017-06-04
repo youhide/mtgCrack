@@ -20,9 +20,8 @@ module.exports = {
 		var searchInput = req.body.searchValue ? req.body.searchValue : '';
 		sails.log('input = '+searchInput);
 		if(searchInput === '') return res.send({title: 'mtgCrack Search', searchInput: searchInput});
-    mtg.card.where({ name: searchInput })
-		.then(cards => {
-		    sails.log(cards);
+    mtg.card.where({ name: searchInput }).then(cards => {
+		    //sails.log(cards);
 				return res.send({title: 'mtgCrack Search '+searchInput, cards: cards, searchInput: searchInput});
     });
 	}

@@ -1,4 +1,4 @@
-addToHomescreen();
+//addToHomescreen();
 
 $.ajax({
   url: '/public/vars',
