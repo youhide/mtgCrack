@@ -42,5 +42,8 @@
   "license": "",
   "devDependencies": {
     "ava": "^0.19.1"
-  }
+  },
+  "engines": {
+    "node": "7.10.0"
+  }  
 }
