@@ -8,7 +8,7 @@ $.ajax({
 });
 
 // Use .get() to contact the server and join room
-io.socket.get('/socket/join', function gotResponse(body, response) {
+io.socket.get('/socket/join', function (body, response) {
   console.log('Socket: Server responded with status code ' + response.statusCode + ' and data: ', body);
 });
 
@@ -18,8 +18,8 @@ $('#searchForm').submit(function(event){
   var inputVal = $('#searchInput').val();
   var postVal = {searchValue: inputVal};
   io.socket.post('/socket/getname', postVal, function (resData, jwRes) {
-    console.log('jwRes = '+jwRes.statusCode);
-    console.log('resData = '+resData.cards);
+    // console.log('jwRes = '+jwRes.statusCode);
+    // console.log('resData = '+resData.cards);
     document.title = resData.title;
     window.history.pushState('', '', '/search/'+inputVal);
     $('#cardsList').empty();

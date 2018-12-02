@@ -10,6 +10,6 @@ module.exports = {
 	  var json = {
 	    publicVars: sails.config.publicVars
 	  };
-	  res.json(200, json);
+	  res.status(200).json(json);
 	}
 };

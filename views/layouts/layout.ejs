@@ -9,6 +9,10 @@
     <link rel="shortcut icon" type="image/png" href="/images/ic_launcher/res/mipmap-mdpi/ic_launcher.png"/>
     <link rel="icon" sizes="192x192" href="/images/ic_launcher/res/mipmap-xxxhdpi/ic_launcher.png">
     <link rel="manifest" href="/manifest.json">
+    
+    <%/* If you want to discourage search engines from indexing this site, uncomment the following line: */%>
+    <%/* <meta name="robots" content="noindex"> */%>
+
 
     <!--
         Stylesheets and Preprocessors
@@ -50,8 +54,8 @@
         ========================
 
         HTML templates are important prerequisites of modern, rich client applications.
-        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
-        that you load these templates client-side.
+        To work their magic, frameworks like React, Vue.js, Angular, Ember, and Backbone
+        require that you load these templates client-side.
 
         By default, your Gruntfile is configured to automatically load and precompile
         client-side JST templates in your `assets/templates` folder, then
@@ -61,7 +65,7 @@
         For example, here are a few things you could do:
 
             + Import templates from other directories
-            + Use a different template engine (handlebars, jade, dust, etc.)
+            + Use a different view engine (handlebars, dust, pug/jade, etc.)
             + Internationalize your client-side templates using a server-side
               stringfile before they're served.
     -->
@@ -69,6 +73,22 @@
     <!--TEMPLATES-->
     
     <!--TEMPLATES END-->
+
+
+    <!--
+        Server-side View Locals
+        ========================
+
+        Sometimes, it's convenient to get access to your server-side view locals from
+        client-side JavaScript.  This can improve page load times, remove the need for
+        extra AJAX requests, and make your client-side code easier to understand and
+        to maintain.  Sails provides a simple mechanism for accessing dynamic view
+        locals: the "exposeLocalsToBrowser()" view partial.
+
+        For more information on using this built-in feature, see:
+        https://sailsjs.com/docs/concepts/views/locals#?escaping-untrusted-data-using-exposelocalstobrowser
+
+    -->
 
 
     <!--
@@ -95,7 +115,7 @@
     -->
 
     <!--SCRIPTS-->
-    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/dependencies/sails.io.js"></script>
     <script src="/js/dependencies/0-jquery.min.js"></script>
     <script src="/js/dependencies/bootstrap.min.js"></script>
     <script src="/js/script.js"></script>

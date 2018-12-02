@@ -11,15 +11,15 @@ module.exports = {
 
 	index: function(req, res){
 		var searchInput = '';
-		res.view('homepage', {title: 'mtgCrack Home', searchInput: searchInput});
+		res.view('pages/homepage', {title: 'mtgCrack Home', searchInput: searchInput});
 	},
 	search: function(req, res){
 		var searchInput = req.params.cardname ? req.params.cardname : '';
-		if(searchInput === '') return res.view('homepage', {title: 'mtgCrack Search', searchInput: searchInput});
+		if(searchInput === '') return res.view('pages/homepage', {title: 'mtgCrack Search', searchInput: searchInput});
     mtg.card.where({ name: searchInput })
 		.then(cards => {
-		    sails.log(cards);
-				return res.view('homepage', {title: 'mtgCrack Search '+searchInput, cards: cards, searchInput: searchInput});
+		    // sails.log(cards);
+				return res.view('pages/homepage', {title: 'mtgCrack Search '+searchInput, cards: cards, searchInput: searchInput});
     });
 	}
 
