@@ -254,7 +254,8 @@ module.exports = {
     ***************************************************************************/
     onlyAllowOrigins: [
       'https://mtgcrack.herokuapp.com',
-      'http://localhost:1337',
+      'http://mtgcrack.herokuapp.com',
+      'http://localhost:1337'
     ],
 
 
