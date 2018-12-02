@@ -398,8 +398,4 @@ module.exports = {
     version: version //package.json version
   },
 
-  sockets: {
-    transports: [ 'websocket' ],
-  }
-
 };

@@ -1,3 +1,5 @@
+io.sails.transports = [ 'websocket', 'polling' ];
+
 $.ajax({
   url: '/public/vars',
   type: 'GET',
