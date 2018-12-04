@@ -1,4 +1,5 @@
 io.sails.transports = [ 'websocket', 'polling' ];
+io.sails.url = "wss://mtgcrack.herokuapp.com/";
 
 $.ajax({
   url: '/public/vars',
