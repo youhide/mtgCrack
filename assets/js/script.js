@@ -39,6 +39,11 @@ $('#searchForm').submit(function(event){
         $('.cardInfo-'+card.id).append('<p class="card-text">Rarity: '+card.rarity+'</p>');
         $('.cardInfo-'+card.id).append('<p class="card-text">Set: '+card.setName+'</p>');
         $('.cardInfo-'+card.id).append('<p class="card-text">Type: '+card.type+'</p>');
+        $('.cardInfo-'+card.id).append('<p class="card-text">');
+        for (var i in card.legalities) {
+          $('.cardInfo-'+card.id).append(card.legalities[i].format+': '+card.legalities[i].legality+'. ');
+        }
+        $('.cardInfo-'+card.id).append('<p class="card-text">');
         if (card.text) {
           $('.cardInfo-'+card.id).append('<p class="card-text"><small class="text-muted">Text: '+card.text+'</small></p>');
         } else {

@@ -25,6 +25,11 @@
               <p class="card-text">Rarity: <%=card['rarity']%></p>
               <p class="card-text">Set: <%=card['setName']%></p>
               <p class="card-text">Type: <%=card['type']%></p>
+              <p class="card-text">
+              <% for (var i in card.legalities) { %>
+                <%=card.legalities[i].format%>: <%=card.legalities[i].legality%>.
+              <% } %>
+              </p>
               <% if (card['text']) { %>
                 <p class="card-text"><small class="text-muted">Text: <%=card['text']%></small></p>
               <% } else { %>
