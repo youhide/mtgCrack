@@ -5,8 +5,8 @@ const allCards = require('./AllCards.json');
 
 fs.writeFileSync('./assets/sitemap.txt', '');
 
-Object.keys(allCards).forEach(function(data){
-  data = encodeURIComponent(data.trim())
-  fs.appendFileSync('./assets/sitemap.txt', "https://mtgcrack.herokuapp.com/search/"+data+"\n");
+Object.keys(allCards).forEach((data) => {
+  data = encodeURIComponent(data.trim());
+  fs.appendFileSync('./assets/sitemap.txt', 'https://mtgcrack.herokuapp.com/search/'+data+'\n');
   console.log(data);
-})
+});

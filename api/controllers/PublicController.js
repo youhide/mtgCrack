@@ -6,10 +6,10 @@
  */
 
 module.exports = {
-	publicVars: function(req, res) {
+  publicVars: function(req, res) {
 	  var json = {
 	    publicVars: sails.config.publicVars
 	  };
 	  res.status(200).json(json);
-	}
+  }
 };

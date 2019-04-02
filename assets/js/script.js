@@ -10,23 +10,23 @@ $.ajax({
 });
 
 // Use .get() to contact the server and join room
-io.socket.get('/socket/join', function (body, response) {
+io.socket.get('/socket/join', (body, response) => {
   console.log('Socket: Server responded with status code ' + response.statusCode + ' and data: ', body);
 });
 
 // Post data to server with sockets
 
-$('#searchForm').submit(function(event){
+$('#searchForm').submit((event) => {
   var inputVal = $('#searchInput').val();
   var postVal = {searchValue: inputVal};
-  io.socket.post('/socket/getname', postVal, function (resData, jwRes) {
+  io.socket.post('/socket/getname', postVal, (resData, jwRes) => {
     // console.log('jwRes = '+jwRes.statusCode);
     // console.log('resData = '+resData.cards);
     document.title = resData.title;
     window.history.pushState('', '', '/search/'+inputVal);
     $('#cardsList').empty();
-    if (typeof resData.cards == 'object' && resData.cards) {
-      resData.cards.forEach( function( card ){
+    if (typeof resData.cards === 'object' && resData.cards) {
+      resData.cards.forEach( ( card ) => {
         $('#cardsList').append('<div class="col-md-3 col-sm-6 cardcol-'+card.id+'">');
         $('.cardcol-'+card.id).append('<div class="box cardbox-'+card.id+'">');
         if (card.imageUrl) {
@@ -56,7 +56,7 @@ $('#searchForm').submit(function(event){
   });
   event.preventDefault();
 });
-$('#searchButton').click(function(){
+$('#searchButton').click(() => {
   $('#searchForm').submit();
 });
 
