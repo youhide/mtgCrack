@@ -31,10 +31,6 @@ module.exports.routes = {
     controller: 'AppController',
     action: 'search'
   },
-  'get /public/vars': {
-    controller: 'PublicController',
-    action: 'publicVars'
-  },
   'get /socket/join': {
     controller: 'SocketController',
     action: 'join'
