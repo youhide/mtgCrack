@@ -34,7 +34,7 @@ $('#searchForm').submit((event) => {
         if (card.imageUrl)
           cardImageUrl = card.imageUrl;
         else 
-          cardImageUrl = "/images/placeholder.png";
+          cardImageUrl = "/images/placeholder.jpeg";
         
         if (card.text)
           cardText = card.text;
