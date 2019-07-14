@@ -1,7 +1,7 @@
 {
   "name": "mtgCrack",
   "short_name": "mtgCrack",
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
   "description": "mtgCrack: the Magic PWA Tool",
